@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WikiOrbit - Jelajahi Alam Semesta</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌌</text></svg>">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Background Stars -->
+  <div class="stars"></div>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">🌌 WikiOrbit</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#apod">APOD</a></li>
+        <li><a href="#nasa-data">Data NASA</a></li>
+        <li><a href="#orbit">Simulasi Orbit</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>Jelajahi Alam Semesta</h1>
+      <p>
+        Temukan keindahan kosmos, data NASA real-time,
+        dan simulasi orbit interaktif dalam satu tempat.
+      </p>
+
+      <a href="#apod" class="hero-btn">
+        Mulai Eksplorasi
+      </a>
+    </div>
+  </section>
+
+  <!-- APOD -->
+  <section id="apod" class="section">
+    <div class="section-title">
+      <h2>Astronomy Picture of the Day</h2>
+      <p>Foto astronomi pilihan NASA setiap hari</p>
+    </div>
+
+    <div class="apod-controls">
+      <label for="apod-date">Pilih Tanggal:</label>
+      <input type="date" id="apod-date" />
+    </div>
+
+    <div class="apod-container glass">
+      <div class="loading" id="apod-loading">
+        Loading APOD...
+      </div>
+
+      <div id="apod-content"></div>
+    </div>
+  </section>
+
+  <!-- NASA DATA -->
+  <section id="nasa-data" class="section">
+    <div class="section-title">
+      <h2>Near Earth Objects</h2>
+      <p>Data asteroid terdekat dari NASA</p>
+    </div>
+
+    <div class="loading" id="neo-loading">
+      Mengambil data asteroid...
+    </div>
+
+    <div class="neo-grid" id="neo-grid"></div>
+  </section>
+
+  <!-- ORBIT SIMULATION -->
+  <section id="orbit" class="section">
+    <div class="section-title">
+      <h2>Simulasi Orbit</h2>
+      <p>Visualisasi gravitasi sederhana berbasis Canvas</p>
+    </div>
+
+    <div class="orbit-controls glass">
+      <button id="toggleSim">Pause</button>
+      <button id="resetSim">Reset</button>
+
+      <div class="slider-container">
+        <label>Kecepatan:</label>
+        <input type="range" id="speedControl" min="0.2" max="5" value="1" step="0.1" />
+      </div>
+    </div>
+
+    <div class="canvas-container glass">
+      <canvas id="orbitCanvas"></canvas>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-title">
+      <h2>Contact Developer</h2>
+      <p>Dukung dan hubungi developer WikiOrbit</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card glass">
+        <i class="fab fa-tiktok"></i>
+        <h3>TikTok</h3>
+        <p>Konten edukasi astronomi & teknologi</p>
+
+        <a target="_blank"
+          href="https://www.tiktok.com/@gibzz_edukasi_astronomy1?_r=1&_t=ZS-92Gyhq9c8YP">
+          Kunjungi
+        </a>
+      </div>
+
+      <div class="contact-card glass">
+        <i class="fab fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p>+62 895-3655-27405</p>
+
+        <a target="_blank"
+          href="https://wa.me/62895365527405">
+          Kunjungi
+        </a>
+      </div>
+
+      <div class="contact-card glass">
+        <i class="fas fa-coins"></i>
+        <h3>Saweria</h3>
+        <p>Dukung pengembangan project</p>
+
+        <a target="_blank"
+          href="https://saweria.co/GIANSSIPETUALANG">
+          Kunjungi
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 WikiOrbit • Build with heart and educate 🎓</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+              </html>
